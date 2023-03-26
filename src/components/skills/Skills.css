@@ -1,0 +1,144 @@
+.skills-container{
+  grid-template-columns: repeat(2, 350px);
+  column-gap: 3rem;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.skills-content{
+  border: 1px solid #FFF;
+  padding: 2rem 4rem;
+  border-radius: 1.25rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.skills-title{
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--mb-1-5);
+  color: #999;
+}
+
+.skills-box{
+  display: flex;
+  justify-content: center;
+  column-gap: 2.5rem;
+}
+
+.skills-group{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
+  row-gap: 2rem;
+  text-align: center;
+}
+
+.skills-data{
+  display: flex;
+  column-gap: .5rem;
+  margin: 0 10px;
+}
+
+.check-icon{
+  font-size: 1rem;
+  color: #FFF;
+}
+
+.skills-name{
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  line-height: 18px;
+  color: #555;
+}
+
+.skills-icon{
+  color: #555;
+  margin-left: .2rem;
+}
+
+.skills-name-icon{
+  display: flex;
+}
+
+/*Descpriton*/
+
+.container-description{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+}
+.container-icons-code{
+  display: flex;
+  gap: 50px;
+
+}
+.icon-descripiton{
+  background-color: #fff;
+  display: flex;
+  border-radius: 10px;
+  color: var(--background-body-color2);
+  padding: 10px;
+  cursor: pointer;
+  transition: .5s;
+  font-size: 1.5rem;
+}
+.icon-descripiton:hover{
+  background-color: #999;
+}
+.container-spans{
+  position: absolute;
+  text-align: center;
+  margin: 20px 0;
+  font-size: .9rem;
+  margin-top: 200px;
+  width: 50%;
+  border-radius: 20px;
+} 
+.container-spans span{
+  padding: 20px;
+  color: #555;
+  font-weight: 700;
+}
+
+
+
+
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .skills-container{
+    grid-template-columns: max-content;
+    row-gap: 2rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 576px) {
+  .skills-container{
+    grid-template-columns: 1fr;
+  }
+  .skills-content{
+    padding: 1.5rem;
+  }
+  .container-description{
+    display: none;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 375px) {
+  .skills-container{
+    margin-top: 5rem;
+  }
+  .skills-box{
+    column-gap: 1.25rem;
+  }
+
+  .skills-name{
+    font-size: var(--small-font-size);
+  }
+  
+}

@@ -1,0 +1,143 @@
+.projects{
+  background-color: var(--background-body-color2);
+}
+.projects-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+}
+.projects-container img{
+  width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-header2);
+}
+.project1,
+.project2{
+  box-shadow: var(--box-shadow-header);
+  background-color: var(--background-body-color1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 550px;
+  width: 550px;
+  transition: .5s ease;
+}
+.project1 span,
+.project2 span{
+  font-size: .7rem;
+}
+.project1:hover, .project2:hover{
+  transform: scale(1.1);
+}
+.content-desc{
+  margin: 20px 0;
+}
+.content-desc h3{
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.content-desc p{
+  font-size: .9rem;
+  color: #999;
+}
+.container-desc-lang {
+  text-align: center;
+}
+.container-lang{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+.container-lang .html,
+.container-lang .css,
+.container-lang .js,
+.container-lang .react{
+  background-color: var(--background-body-color2);
+  width: 80px;
+  height: 30px;
+  font-size: .7rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-desc-lang a{
+  color: var(--background-body-color2);
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+.container-desc-lang a:hover{
+  color: #999;
+}
+
+.project-git{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 40px 0;
+}
+.project-git .git-repo{
+  background-color: var(--background-body-color1);
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #FFF;
+}
+.project-git a{
+  color: #999;
+  font-size: .8rem;
+}
+
+
+@media (max-width: 926px){
+  .projects-container{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .project1,
+  .project2{
+    text-align: center;
+    height: 50%;
+    width: 80%;
+  }
+  .project1 span,
+  .project2 span{
+    font-size: .7rem;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 520px){
+  .content-desc h3{
+    font-size: .9rem;
+    margin-bottom: 10px;
+  }
+  .content-desc p{
+    font-size: .7rem;
+  }
+  .container-lang .html,
+  .container-lang .css,
+  .container-lang .js,
+  .container-lang .react{
+    font-size: .5rem;
+  }
+  .project1,
+  .project2{
+    width: 90%;
+  }
+  .project1:hover, .project2:hover{
+    transform: scale(1);
+  }
+}
+
