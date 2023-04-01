@@ -1,6 +1,6 @@
 import {FaGithub} from 'react-icons/fa'
 import './Project.css'
-import ControleFinanceiro from '../../assets/controle.png'
+import { Link } from 'react-router-dom'
 import Netflix from '../../assets/netflix.png'
 import Phonestore from '../../assets/phonestore.png'
 
@@ -55,6 +55,14 @@ export const Projects = () => {
             <a href="https://celular-store.vercel.app/" target={'_blank'}>Clique Aqui!</a>
           </div>
         </div>
+      </div>
+      <div className="position-button">
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text"><Link to='/projetos'>Veja mais</Link></span>
+        </button>
       </div>
       <div className="project-git">
         <a href="https://github.com/Gguife" target={'_blank'}> <FaGithub className='git-repo' /><br/>Clique aqui para acessar meu repositório!</a>
