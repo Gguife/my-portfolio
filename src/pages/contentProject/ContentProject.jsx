@@ -4,7 +4,7 @@ import {BiArrowBack} from 'react-icons/bi'
 
 //Images
 import Clima from '../../assets/climaJS.png'
-import Discord from '../../assets/Discord.jpg'
+import Discord from '../../assets/discord.jpg'
 import ControleFinanceiro from '../../assets/controleFinanceiro.png'
 import VendasPizza from '../../assets/pizzaStore.png'
 import PortfolioSass from '../../assets/portSass.png'
