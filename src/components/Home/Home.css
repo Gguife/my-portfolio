@@ -167,3 +167,9 @@
     height: 180px;
   }
 }
+
+@media screen and (orientation: landscape) {
+  .home-container{
+    height: 160vh;
+  }
+}

@@ -97,7 +97,9 @@
 
 
 
-
-/*Cetificados BUTTON*/
-
+@media screen and (orientation: landscape) {
+  .about-container{
+    height: 160vh;
+  }
+}
 
