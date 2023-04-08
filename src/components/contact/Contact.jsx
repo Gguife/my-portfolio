@@ -3,7 +3,8 @@ import emailjs from "@emailjs/browser"
 import './Contact.css'
 import {AiOutlineArrowRight, AiOutlineWhatsApp} from 'react-icons/ai'
 import {MdOutgoingMail} from 'react-icons/md'
-import {FaFacebookMessenger} from 'react-icons/fa'
+import {ImCheckboxChecked} from 'react-icons/im'
+import {BiErrorCircle} from 'react-icons/bi'
 
 export const Contact = () => {
   const form = useRef();
@@ -15,6 +16,37 @@ export const Contact = () => {
 
     e.target.reset()
   };
+
+  const handleSendClick = (e) =>{
+    e.preventDefault();
+    
+    const msgSend = document.querySelector('.msg-send');
+    const msgErro = document.querySelector('.msg-error');
+    const email = document.querySelector('#email');
+    const nome = document.querySelector('#name');
+    const obs = document.querySelector('#project');
+
+    if(nome.value !== '' && email.value !== '' && obs.value !== ''){
+      msgSend.style.display = 'block';
+
+      emailjs.sendForm('service_ymhe1jk', 'template_pbthub7', form.current, 'OvbrKX0pZ57OzMih6');
+
+      nome.value = '';
+      email.value = '';
+      obs.value = '';
+      
+      setTimeout(() =>{
+        msgSend.style.display = 'none';
+      }, 3000)
+    }else{
+      msgErro.style.display = 'block';
+    
+      setTimeout(() =>{
+        msgErro.style.display = 'none';
+      }, 3000)
+    }
+
+};
 
 
   return (
@@ -34,6 +66,8 @@ export const Contact = () => {
                name='name'
                className='contact-form-input'
                placeholder='Digite seu nome'
+               id='name'
+               required
               />
             </div>
 
@@ -43,15 +77,17 @@ export const Contact = () => {
                name='email'
                className='contact-form-input'
                placeholder='Digite seu email'
+               id='email'
+               required
               />
             </div>
 
             <div className="contact-form-div contact-form-area">
               <label className="contact-form-tag">Observação</label>
-              <textarea name="project" cols="30" rows="10" className='contact-form-input' placeholder='Deixe seu comentário'></textarea>
+              <textarea name="project" id='project' cols="30" rows="10" className='contact-form-input' placeholder='Deixe seu comentário' required></textarea>
             </div>
             <div className='button-contact'>
-            <button className="button button--flex">
+            <button className="button button--flex" onClick={handleSendClick}>
                 Send
                 <svg
                   class="button__icon"
@@ -94,6 +130,14 @@ export const Contact = () => {
 
               <a href="https://wa.me/5512981885646" className="contact-button">Fale comigo <AiOutlineArrowRight className='contact-button-icon'/></a>
             </div>
+          </div>
+
+          <div className="msg-send">
+            <p><ImCheckboxChecked/></p>
+          </div>
+          <div className='msg-error'>
+            <BiErrorCircle/>
+            <p>Preencha todos os campos</p>
           </div>
       </div>
     </section>

@@ -2,6 +2,7 @@ import './About.css'
 import AboutImg from '../../assets/eucartoon.png'
 import CV from '../../assets/cv.pdf'
 import { Info } from './Info'
+import { Link } from 'react-router-dom'
 
 export const About = () => {
   return (

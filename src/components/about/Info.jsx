@@ -13,7 +13,7 @@ export const Info = () => {
       <div className="about-box">
         <FaAward className='about-icon' />
         <h3 className="about-title">Certificados</h3>
-        <span className="about-subtitle">Todos em meu Cv</span>
+        <span className="about-subtitle">Em certificados</span>
       </div>
 
       <div className="about-box">
