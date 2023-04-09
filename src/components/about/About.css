@@ -97,9 +97,8 @@
 
 
 
-@media screen and (orientation: landscape) {
+@media only screen and (max-width: 767px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1) {
   .about-container{
     height: 160vh;
   }
 }
-
